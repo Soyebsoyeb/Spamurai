@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CleanMail Pro</title>
+    <title>Spamurai</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
@@ -9,21 +9,22 @@
 <div class="background"></div>
 
 <div class="card">
-    <h1>CleanMail Pro</h1>
-    <p class="subtitle">Smart Gmail Cleaning — Fast & Secure</p>
+    <h1>Spamurai</h1>
+    <p class="subtitle">Let, Spamurai destroy all the spammers</p>
 
     <input type="email" id="email" placeholder="Gmail Address" required>
     <input type="password" id="password" placeholder="16-Digit App Password" required>
 
-    <div class="options">
+    <div class="options1">
         <label>
-            <input type="checkbox" id="unread">
             Delete Read Emails
+            <input type="checkbox" class = "checkbox1" id="read">
         </label>
-
+    </div>
+    <div class="options2">
         <label>
-            <input type="checkbox" id="promo">
             Delete Promotional Emails
+            <input type="checkbox" class = "checkbox2" id="promo">
         </label>
     </div>
 
@@ -43,7 +44,7 @@ function cleanMail() {
         body: JSON.stringify({
             email: document.getElementById("email").value,
             password: document.getElementById("password").value,
-            unread: document.getElementById("unread").checked,
+            read: document.getElementById("read").checked,
             promo: document.getElementById("promo").checked
         })
     })

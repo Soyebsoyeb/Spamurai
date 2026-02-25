@@ -42,7 +42,7 @@ def home():
 def clean():
     email_user = request.json.get("email")
     password = request.json.get("password")
-    delete_unread = request.json.get("unread")
+    delete_read = request.json.get("read")
     delete_promo = request.json.get("promo")
 
     try:
@@ -51,8 +51,8 @@ def clean():
 
         total_deleted = 0
 
-        if delete_unread:
-            total_deleted += delete_messages(mail, "INBOX", "UNSEEN")
+        if delete_read:
+            total_deleted += delete_messages(mail, "INBOX", "SEEN")
 
         if delete_promo:
             total_deleted += delete_messages(mail, '"[Gmail]/Promotions"', "ALL")

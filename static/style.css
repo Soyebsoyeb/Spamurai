@@ -53,27 +53,16 @@ input {
     padding: 12px;
     margin-bottom: 15px;
     border-radius: 12px;
-    border: none;
-    outline: none;
+    border: black;
+    outline: grey;
     font-size: 14px;
 }
-
-.options {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.options label {
-    display: block;
-    margin-bottom: 10px;
-}
-
 button {
     width: 100%;
     padding: 12px;
     border-radius: 12px;
     border: none;
-    background: #00c853;
+    background: #23a4db;
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -82,7 +71,7 @@ button {
 
 button:hover {
     transform: scale(1.05);
-    background: #00e676;
+    background: #d70a0a;
 }
 
 #result {
@@ -98,4 +87,14 @@ button:hover {
 .error {
     color: #ff4b4b;
     font-size: 14px;
+}
+.options1 label{
+    white-space: nowrap;
+    display: flex;
+    gap: 172px;             /* space between text and checkbox */
+}
+.options2 label{
+    white-space: nowrap;
+    display: flex;
+    gap: 120px;
 }
